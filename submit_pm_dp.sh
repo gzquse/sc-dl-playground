@@ -1,6 +1,6 @@
 #!/bin/bash 
 #SBATCH -C gpu 
-#SBATCH -A ntrain4
+#SBATCH -A nintern
 #SBATCH -q regular
 #SBATCH --ntasks-per-node 4
 #SBATCH --cpus-per-task 32
@@ -8,7 +8,6 @@
 #SBATCH --time=01:00:00
 #SBATCH --image=nersc/pytorch:ngc-23.07-v0
 #SBATCH --module=gpu,nccl-2.18
-#SBATCH --reservation=sc23_dl_tutorial_2
 #SBATCH -J vit-era5
 #SBATCH -o %x-%j.out
 
